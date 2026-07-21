@@ -1,0 +1,131 @@
+.skills-section {
+  padding-block: var(--section-space);
+  scroll-margin-top: var(--space-6);
+}
+
+.skills-header {
+  max-width: 53rem;
+  padding-bottom: clamp(var(--space-6), 8vw, 6rem);
+}
+
+.section-label {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.skills-header h2 {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: var(--border-subtle);
+}
+
+.skill-group {
+  min-height: 16rem;
+  padding: 2rem;
+  border-bottom: var(--border-subtle);
+  transition: background 0.3s ease;
+}
+
+.skill-group:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.skill-group:nth-child(odd) {
+  border-right: var(--border-subtle);
+}
+
+.skill-group:last-child {
+  grid-column: span 2;
+}
+
+.skill-group h3 {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Skill Pills ---------- */
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.65rem 1rem;
+
+  border: var(--border-subtle);
+  border-radius: 10px;
+
+  background: var(--color-surface);
+
+  color: var(--color-text);
+
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+
+  white-space: nowrap;
+
+  box-shadow: var(--shadow-xs);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.skill-pill:hover {
+  background: var(--color-olive);
+  color: #fff;
+  border-color: var(--color-olive);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+  .skills-header {
+    padding-bottom: var(--space-6);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-group,
+  .skill-group:last-child {
+    grid-column: auto;
+    min-height: auto;
+    padding: 1.5rem 0;
+  }
+
+  .skill-group:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .skill-list {
+    margin-top: 1rem;
+  }
+}

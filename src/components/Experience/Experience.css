@@ -1,0 +1,175 @@
+.experience-section {
+  padding-block: var(--section-space);
+  scroll-margin-top: var(--space-6);
+}
+
+.experience-header {
+  max-width: 54rem;
+  padding-bottom: clamp(var(--space-7), 13vw, 11rem);
+}
+
+.section-label,
+.experience-role time,
+.experience-achievements h4,
+.experience-technologies h4 {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.experience-header h2 {
+  max-width: 48rem;
+  margin-top: var(--space-3);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.experience-header > p:last-child {
+  max-width: 42rem;
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.experience-timeline {
+  border-top: var(--border-subtle);
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.45fr) minmax(0, 1fr);
+  gap: clamp(var(--space-5), 9vw, 9rem);
+  padding-block: clamp(var(--space-6), 9vw, 8rem);
+  border-bottom: var(--border-subtle);
+}
+
+.experience-year {
+  padding-top: 0.4rem;
+}
+
+.experience-year time {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 9vw, 8rem);
+  font-weight: 400;
+  letter-spacing: -0.08em;
+  line-height: 0.75;
+}
+
+.experience-content {
+  max-width: 48rem;
+}
+
+.experience-content h3 {
+  font-size: clamp(3rem, 5.5vw, 5.6rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+}
+
+.experience-role {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  align-items: baseline;
+  margin-top: var(--space-3);
+}
+
+.experience-role p {
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+}
+
+.experience-overview {
+  max-width: 42rem;
+  margin-top: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  line-height: 1.55;
+}
+
+.experience-achievements,
+.experience-technologies {
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  border-top: var(--border-subtle);
+}
+
+.experience-achievements ul {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.experience-achievements li {
+  position: relative;
+  padding-left: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+.experience-achievements li::before {
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  content: "-";
+}
+
+.experience-technologies ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-3);
+}
+
+.experience-technologies li {
+  padding: 0.45rem 0.65rem;
+  border: var(--border-subtle);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 760px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .experience-year {
+    padding-top: 0;
+  }
+
+  .experience-year time {
+    font-size: clamp(4rem, 16vw, 6rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-header {
+    padding-bottom: var(--space-7);
+  }
+
+  .experience-header > p:last-child,
+  .experience-overview,
+  .experience-role p {
+    font-size: var(--font-size-base);
+  }
+
+  .experience-item {
+    padding-block: var(--space-6);
+  }
+
+  .experience-content h3 {
+    font-size: clamp(3rem, 16vw, 4.8rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-header {
+    transition-duration: 0.01ms;
+  }
+}
