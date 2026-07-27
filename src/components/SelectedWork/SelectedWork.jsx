@@ -3,7 +3,7 @@ import { FiArrowUpRight, FiGithub } from "react-icons/fi";
 import AttendImage from "../../assets/projects/attend-ai.png";
 import SalaryImage from "../../assets/projects/salary-predictor.png";
 import CreditImage from "../../assets/projects/credit-score.png";
-
+import MimesisImage from "../../assets/projects/mimesis.png;
 import {
   Badge,
   Button,
