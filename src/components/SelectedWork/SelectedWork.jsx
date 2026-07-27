@@ -43,6 +43,37 @@ const works = [
     github: "https://github.com/siddheshbhurke/attend-ai",
     
   },
+  {
+  id: "mimesis",
+
+  featured: true,
+
+  image: MimesisImage,
+
+  category: "Deep Learning",
+
+  title: "Mimesis",
+
+  subtitle: "Real-Time Neural Style Transfer",
+
+  description:
+    "Deep learning-powered web application that transforms content images into artistic creations using Adaptive Instance Normalization (AdaIN). Built with PyTorch and Flask, it supports fast neural style transfer through a pretrained encoder-decoder architecture.",
+
+  tags: [
+    "PyTorch",
+    "Flask",
+    "AdaIN",
+    "OpenCV",
+    "Python",
+  ],
+
+  metrics: [
+    { label: "Inference", value: "<1s" },
+    { label: "Device", value: "CPU/GPU" },
+  ],
+
+  github: "https://github.com/siddheshbhurke/mimesis",
+},
 
   {
     id: "salary",
